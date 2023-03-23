@@ -17,13 +17,16 @@
             electric: false,
             viteza: 180,
             stop: function(){
-                console.log('masina s a oprit!')
+                masina.viteza = 0
+                console.log('masina s a oprit! viteza este ')
             }
         }
         console.log(masina);
+        masina.nume ="audi";
         console.log(masina.nume);
         console.log(masina.an.versiunea2);
         console.log(masina.an['versiunea2']);
+        masina.stop();
     </script>
 </body>
 </html>
