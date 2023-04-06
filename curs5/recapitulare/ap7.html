@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Vehicle{
+            constructor(vehicul, culoare, model, an){
+                this._vehicul = vehicul;
+                this._culoare = culoare;
+                this._model = model;
+                this._an = an;
+            }
+            get vehicul(){
+                console.log("sunt in getter de vehicul")
+                return this._vehicul;
+            }
+            set vehicul(value){
+                console.log("sunt in setter de vehicul")
+                this._vehicul = value;
+            }
+            info(){
+                return `Informatii despre masina: ${this.vehicul}, ${this._culoare}, ${this._model}, ${this._an}`
+            }
+            start(){
+                return `masina a pornit`
+            }
+            stop(){
+                return "masina s a oprit"
+            }
+            pickUpPassengers(){
+                return "masina a luat pasageri"
+            }
+            dropOffPassengers(){
+                return "masina a lasat pasageri"
+            }
+        }
+        const vehicle1 = new Vehicle("car", "red", "ford", 2015);
+        const vehicle2 = new Vehicle("motorbike", "blue", "honda", 2018);
+        vehicle1.vehicul;
+        vehicle1.vehicul = "bicicleta";
+        console.log(vehicle1.info());
+        console.log(vehicle1.start());
+        console.log(vehicle1.stop());
+        console.log(vehicle1.pickUpPassengers());
+        console.log(vehicle1.dropOffPassengers());
+    </script>
+</body>
+</html>
