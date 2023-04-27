@@ -8,6 +8,15 @@ abstract class Person2 {
     display(): void{
         console.log(this.name);
     }
+    protected salut():string{
+        if(this.name == "ion"){
+            return this.name;
+        }
+        else{
+            return "vasile";
+        }
+        
+    }
 
     abstract find(name:string): Person2;
 }
