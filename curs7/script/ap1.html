@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ap1
+        let num1=10;
+        let num2=20;
+        let aux;
+        aux = num1;
+        num1=num2;
+        num2=aux;
+        console.log(num1,num2);
+        // ap2
+        let str ="capac";
+        let str2="mere";
+        function palindrom(string){
+            let reversedString="";
+            for(let i=0;i<str.length;i++){
+                reversedString = str.charAt(i)+reversedString;
+            }
+            if(str===reversedString){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        console.log(palindrom());
+
+        // met2
+        function palindrom2(str){
+            let reversedString = str.split("").reverse().join("");
+            if(str===reversedString){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        // ap3
+        function sir(str,nr){
+           return str.split(" ").slice(0, nr).join(" ");
+        }
+        console.log(sir("javascrip este un limbaj de programare usor de invatat", 16))
+        // ap4
+        const day = 1000*60*60*24;
+        function getDayBetweenDates(dateText1, dateText2){
+            const date1 = new Date(dateText1);
+            const date2 = new Date(dateText2);
+            const difftime = Math.abs(date2-date1);
+            const diffdays = Math.ceil(difftime/day);
+            return diffdays;
+        }
+        // ap5
+        function removeduplicates(arr){
+            if(arr.length<=1) return arr;
+            let curretindex = 0;
+            arr = arr.sort((a,b)=>a-b);
+            for(let i=1; i<arr.length;i++){
+                if(arr[curretindex] !== arr[i]){
+                    curretindex++;
+                    arr[curretindex]=arr[i];
+
+                }
+            }
+            arr.length = curretindex+1;
+            return arr;
+        }
+        const arr = [6,8,5,1,10,20,4,2,3,5,9,6,2,7,1];
+        console.log(removeduplicates());
+    </script>
+</body>
+</html>
