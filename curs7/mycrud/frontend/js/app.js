@@ -76,6 +76,16 @@ $(document).ready(function ($) {
         })
     })
     // END Adauga utilizator nou
+
+    //START vezi detalii
+    $('body').on('click', ".view", function(){
+        
+    }
+    
+    )
+    //STOP vezi detalii
+
+
     //   Editeaza utilizator
     $('body').on('click', '.edit', function () {
         var id = $(this).data('id');

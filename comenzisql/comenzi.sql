@@ -1,0 +1,14 @@
+CREATE SCHEMA `jscrud` DEFAULT CHARACTER SET utf8 ;
+
+
+CREATE TABLE `jscrud`.`utilizator` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `last_name` VARCHAR(45) NOT NULL,
+  `first_name` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(145) NULL,
+  `mobile` CHAR(10) NULL,
+  `date_add` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
