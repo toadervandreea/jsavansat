@@ -58,12 +58,13 @@ $(document).ready(function ($) {
                     render: $.fn.dataTable.render.moment('YYYY-MM-DDTHH:mm:ss.SSSSZ','YYYY-MM-DD' )
     
                 },
+               
                 {
                     "data": 'actiune',
                     render: function (data, type, row, meta) {
                         if (type === 'display') {
                             let link = 'http://localhost:3002/users/' + row.id;
-                            return `<a href="javascript:void(0)" class="btn btn-info view" data-id="` + row.id + `">Vezi</a>
+                            return `<a href="javascript:void(0)" class="btn btn-info view" id="myModa"` + row.id + `">Vezi</a>
                             <a href="javascript:void(0)" class="btn btn-primary edit" data-id="`+ row.id + `">Editeaza</a>
                             <a href="javascript:void(0)" class="btn btn-danger delete" data-id="`+ row.id + `">Sterge</a>`;
                         }
@@ -78,11 +79,16 @@ $(document).ready(function ($) {
     // END Adauga utilizator nou
 
     //START vezi detalii
-    $('body').on('click', ".view", function(){
-        
-    }
-    
-    )
+    // $(document).ready(function(){
+    //     $(".btn").click(function(){
+    //         $("#myModal").modal('show');
+    //     });
+    // });
+    $('body').on('click', '.view', function () {
+        $('#myModal').modal('show');
+        console.log("muie ")
+    })
+   
     //STOP vezi detalii
 
 
